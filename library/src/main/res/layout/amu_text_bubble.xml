@@ -20,7 +20,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.google.maps.android.ui.RotationLayout
+    <me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.ui.RotationLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -35,6 +35,6 @@
             android:paddingRight="10dp"
             android:paddingTop="5dp" />
 
-    </com.google.maps.android.ui.RotationLayout>
+    </me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.ui.RotationLayout>
 
 </LinearLayout>
