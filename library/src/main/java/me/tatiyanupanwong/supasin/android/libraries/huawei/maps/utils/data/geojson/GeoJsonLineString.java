@@ -15,14 +15,14 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.LineString;
 
 import java.util.List;
 
 /**
  * A GeoJsonLineString geometry represents a number of connected {@link
- * com.google.android.gms.maps.model.LatLng}s.
+ * com.huawei.hms.maps.model.LatLng}s.
  */
 public class GeoJsonLineString extends LineString {
     private final List<Double> mAltitudes;

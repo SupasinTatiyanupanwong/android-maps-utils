@@ -16,7 +16,7 @@
 
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data;
 
-import com.google.android.gms.maps.GoogleMap;
+import com.huawei.hms.maps.HuaweiMap;
 
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson.GeoJsonLineStringStyle;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson.GeoJsonPointStyle;
@@ -71,7 +71,7 @@ public abstract class Layer {
     }
 
     /**
-     * Sets a single click listener for the entire GoogleMap object, that will be called
+     * Sets a single click listener for the entire HuaweiMap object, that will be called
      * with the corresponding Feature object when an object on the map (Polygon,
      * Marker, Polyline) is clicked.
      * <p>
@@ -176,7 +176,7 @@ public abstract class Layer {
      *
      * @return map on which the layer is rendered
      */
-    public GoogleMap getMap() {
+    public HuaweiMap getMap() {
         return mRenderer.getMap();
     }
 
@@ -186,7 +186,7 @@ public abstract class Layer {
      *
      * @param map to render the layer on, if null the layer is cleared from the current map
      */
-    public void setMap(GoogleMap map) {
+    public void setMap(HuaweiMap map) {
         mRenderer.setMap(map);
     }
 

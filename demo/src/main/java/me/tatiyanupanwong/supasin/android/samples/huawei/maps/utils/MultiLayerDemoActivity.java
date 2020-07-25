@@ -20,10 +20,10 @@ import android.graphics.Color;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.huawei.hms.maps.CameraUpdateFactory;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.MarkerOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.ClusterManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.GroundOverlayManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.MarkerManager;

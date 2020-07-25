@@ -16,7 +16,7 @@
 
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 
 /**
  * An abstraction that shares the common properties of

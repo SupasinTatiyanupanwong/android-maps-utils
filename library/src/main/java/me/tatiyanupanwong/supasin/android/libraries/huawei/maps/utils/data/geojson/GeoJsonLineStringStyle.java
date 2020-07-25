@@ -15,8 +15,8 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.PatternItem;
-import com.google.android.gms.maps.model.PolylineOptions;
+import com.huawei.hms.maps.model.PatternItem;
+import com.huawei.hms.maps.model.PolylineOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Style;
 
 import java.util.Arrays;
@@ -24,9 +24,7 @@ import java.util.List;
 
 /**
  * A class that allows for GeoJsonLineString objects to be styled and for these styles to be
- * translated into a PolylineOptions object. {@see
- * <a href="https://developer.android.com/reference/com/google/android/gms/maps/model/PolylineOptions.html">
- * PolylineOptions docs</a> for more details about the options.}
+ * translated into a PolylineOptions object.
  */
 public class GeoJsonLineStringStyle extends Style implements GeoJsonStyle {
 

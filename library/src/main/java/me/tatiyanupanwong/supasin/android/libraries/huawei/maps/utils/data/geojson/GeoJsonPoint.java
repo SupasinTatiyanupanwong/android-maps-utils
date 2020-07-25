@@ -15,11 +15,11 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Point;
 
 /**
- * A GeoJsonPoint geometry contains a single {@link com.google.android.gms.maps.model.LatLng}.
+ * A GeoJsonPoint geometry contains a single {@link com.huawei.hms.maps.model.LatLng}.
  */
 public class GeoJsonPoint extends Point {
     private final Double mAltitude;

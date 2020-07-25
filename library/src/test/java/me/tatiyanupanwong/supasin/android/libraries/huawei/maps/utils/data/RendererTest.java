@@ -15,8 +15,8 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLng;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,7 +29,7 @@ import java.util.Set;
 import static org.junit.Assert.*;
 
 public class RendererTest {
-    private GoogleMap mMap1;
+    private HuaweiMap mMap1;
     private Renderer mRenderer;
     private Set<Feature> featureSet;
 

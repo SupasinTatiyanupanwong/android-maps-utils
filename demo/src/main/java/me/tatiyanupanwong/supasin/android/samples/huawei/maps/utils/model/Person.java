@@ -16,7 +16,7 @@
 
 package me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils.model;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.ClusterItem;
 
 public class Person implements ClusterItem {

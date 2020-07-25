@@ -18,9 +18,9 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collectio
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.Polyline;
+import com.huawei.hms.maps.model.PolylineOptions;
 
 /**
  * Keeps track of collections of polylines on the map. Delegates all Polyline-related events to each
@@ -29,9 +29,9 @@ import com.google.android.gms.maps.model.PolylineOptions;
  * All polyline operations (adds and removes) should occur via its collection class. That is, don't
  * add a polyline via a collection, then remove it via Polyline.remove()
  */
-public class PolylineManager extends MapObjectManager<Polyline, PolylineManager.Collection> implements GoogleMap.OnPolylineClickListener {
+public class PolylineManager extends MapObjectManager<Polyline, PolylineManager.Collection> implements HuaweiMap.OnPolylineClickListener {
 
-    public PolylineManager(@NonNull GoogleMap map) {
+    public PolylineManager(@NonNull HuaweiMap map) {
         super(map);
     }
 
@@ -61,7 +61,7 @@ public class PolylineManager extends MapObjectManager<Polyline, PolylineManager.
     }
 
     public class Collection extends MapObjectManager.Collection {
-        private GoogleMap.OnPolylineClickListener mPolylineClickListener;
+        private HuaweiMap.OnPolylineClickListener mPolylineClickListener;
 
         public Collection() {
         }
@@ -104,7 +104,7 @@ public class PolylineManager extends MapObjectManager<Polyline, PolylineManager.
             return getObjects();
         }
 
-        public void setOnPolylineClickListener(GoogleMap.OnPolylineClickListener polylineClickListener) {
+        public void setOnPolylineClickListener(HuaweiMap.OnPolylineClickListener polylineClickListener) {
             mPolylineClickListener = polylineClickListener;
         }
     }

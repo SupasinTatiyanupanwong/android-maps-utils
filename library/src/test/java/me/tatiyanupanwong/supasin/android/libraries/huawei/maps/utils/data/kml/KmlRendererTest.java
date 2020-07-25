@@ -15,7 +15,7 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.kml;
 
-import com.google.android.gms.maps.GoogleMap;
+import com.huawei.hms.maps.HuaweiMap;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Feature;
 
 import org.junit.Before;
@@ -31,7 +31,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 public class KmlRendererTest {
-    private GoogleMap mMap1;
+    private HuaweiMap mMap1;
     private KmlRenderer mRenderer;
     KmlParser mParser;
 
@@ -49,7 +49,7 @@ public class KmlRendererTest {
     @Test
     public void testDefaultStyleClickable() {
         // TODO - we should call mRenderer.addLayerToMap() here for a complete end-to-end test, but
-        // that requires an instantiated GoogleMap be passed into KmlRenderer()
+        // that requires an instantiated HuaweiMap be passed into KmlRenderer()
         for (Feature f : mRenderer.getFeatures()) {
             assertTrue(((KmlPlacemark)f).getPolylineOptions().isClickable());
             assertTrue(((KmlPlacemark)f).getPolygonOptions().isClickable());

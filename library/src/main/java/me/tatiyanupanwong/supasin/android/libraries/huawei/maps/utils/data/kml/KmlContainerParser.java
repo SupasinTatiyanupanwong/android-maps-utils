@@ -15,7 +15,7 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.kml;
 
-import com.google.android.gms.maps.model.GroundOverlay;
+import com.huawei.hms.maps.model.GroundOverlay;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Feature;
 
 import org.xmlpull.v1.XmlPullParser;

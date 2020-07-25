@@ -15,7 +15,7 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.GoogleMap;
+import com.huawei.hms.maps.HuaweiMap;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.GroundOverlayManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.MarkerManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.PolygonManager;
@@ -28,7 +28,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * Renders GeoJsonFeature objects onto the GoogleMap as Marker, Polyline and Polygon objects. Also
+ * Renders GeoJsonFeature objects onto the HuaweiMap as Marker, Polyline and Polygon objects. Also
  * removes GeoJsonFeature objects and redraws features when updated.
  */
 public class GeoJsonRenderer extends Renderer implements Observer {
@@ -45,7 +45,7 @@ public class GeoJsonRenderer extends Renderer implements Observer {
      * @param polylineManager polyline manager to create polyline collection from
      * @param groundOverlayManager ground overlay manager to create ground overlay collection from
      */
-    /* package */ GeoJsonRenderer(GoogleMap map, HashMap<GeoJsonFeature, Object> features, MarkerManager markerManager, PolygonManager polygonManager, PolylineManager polylineManager, GroundOverlayManager groundOverlayManager) {
+    /* package */ GeoJsonRenderer(HuaweiMap map, HashMap<GeoJsonFeature, Object> features, MarkerManager markerManager, PolygonManager polygonManager, PolylineManager polylineManager, GroundOverlayManager groundOverlayManager) {
         super(map, features, markerManager, polygonManager, polylineManager, groundOverlayManager);
     }
 
@@ -53,9 +53,9 @@ public class GeoJsonRenderer extends Renderer implements Observer {
      * Changes the map that GeoJsonFeature objects are being drawn onto. Existing objects are
      * removed from the previous map and drawn onto the new map.
      *
-     * @param map GoogleMap to place GeoJsonFeature objects on
+     * @param map HuaweiMap to place GeoJsonFeature objects on
      */
-    public void setMap(GoogleMap map) {
+    public void setMap(HuaweiMap map) {
         super.setMap(map);
         for (Feature feature : super.getFeatures()) {
             redrawFeatureToMap((GeoJsonFeature) feature, map);
@@ -123,7 +123,7 @@ public class GeoJsonRenderer extends Renderer implements Observer {
         redrawFeatureToMap(feature, getMap());
     }
 
-    private void redrawFeatureToMap(GeoJsonFeature feature, GoogleMap map) {
+    private void redrawFeatureToMap(GeoJsonFeature feature, HuaweiMap map) {
         removeFromMap(getAllFeatures().get(feature));
         putFeatures(feature, FEATURE_NOT_ON_MAP);
         if (map != null && feature.hasGeometry()) {

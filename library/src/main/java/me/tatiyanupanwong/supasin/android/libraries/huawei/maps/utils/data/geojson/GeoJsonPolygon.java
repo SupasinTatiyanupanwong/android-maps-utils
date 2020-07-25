@@ -15,14 +15,14 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.DataPolygon;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A GeoJsonPolygon geometry contains an array of arrays of {@link com.google.android.gms.maps.model.LatLng}s.
+ * A GeoJsonPolygon geometry contains an array of arrays of {@link com.huawei.hms.maps.model.LatLng}s.
  * The first array is the polygon exterior boundary. Subsequent arrays are holes.
  */
 

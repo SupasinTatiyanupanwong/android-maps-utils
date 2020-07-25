@@ -18,9 +18,9 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collectio
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.Circle;
-import com.google.android.gms.maps.model.CircleOptions;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.Circle;
+import com.huawei.hms.maps.model.CircleOptions;
 
 /**
  * Keeps track of collections of circles on the map. Delegates all Circle-related events to each
@@ -29,9 +29,9 @@ import com.google.android.gms.maps.model.CircleOptions;
  * All circle operations (adds and removes) should occur via its collection class. That is, don't
  * add a circle via a collection, then remove it via Circle.remove()
  */
-public class CircleManager extends MapObjectManager<Circle, CircleManager.Collection> implements GoogleMap.OnCircleClickListener {
+public class CircleManager extends MapObjectManager<Circle, CircleManager.Collection> implements HuaweiMap.OnCircleClickListener {
 
-    public CircleManager(@NonNull GoogleMap map) {
+    public CircleManager(@NonNull HuaweiMap map) {
         super(map);
     }
 
@@ -61,7 +61,7 @@ public class CircleManager extends MapObjectManager<Circle, CircleManager.Collec
     }
 
     public class Collection extends MapObjectManager.Collection {
-        private GoogleMap.OnCircleClickListener mCircleClickListener;
+        private HuaweiMap.OnCircleClickListener mCircleClickListener;
 
         public Collection() {
         }
@@ -104,7 +104,7 @@ public class CircleManager extends MapObjectManager<Circle, CircleManager.Collec
             return getObjects();
         }
 
-        public void setOnCircleClickListener(GoogleMap.OnCircleClickListener circleClickListener) {
+        public void setOnCircleClickListener(HuaweiMap.OnCircleClickListener circleClickListener) {
             mCircleClickListener = circleClickListener;
         }
     }

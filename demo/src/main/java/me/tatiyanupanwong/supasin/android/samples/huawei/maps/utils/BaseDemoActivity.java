@@ -20,12 +20,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.OnMapReadyCallback;
+import com.huawei.hms.maps.SupportMapFragment;
 
 public abstract class BaseDemoActivity extends FragmentActivity implements OnMapReadyCallback {
-    private GoogleMap mMap;
+    private HuaweiMap mMap;
     private boolean mIsRestore;
 
     protected int getLayoutId() {
@@ -41,7 +41,7 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
     }
 
     @Override
-    public void onMapReady(GoogleMap map) {
+    public void onMapReady(HuaweiMap map) {
         if (mMap != null) {
             return;
         }
@@ -58,7 +58,7 @@ public abstract class BaseDemoActivity extends FragmentActivity implements OnMap
      */
     protected abstract void startDemo(boolean isRestore);
 
-    protected GoogleMap getMap() {
+    protected HuaweiMap getMap() {
         return mMap;
     }
 }

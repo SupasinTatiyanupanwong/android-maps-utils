@@ -17,8 +17,8 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geoj
 
 import android.util.Log;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLngBounds;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Geometry;
 
 import org.json.JSONArray;

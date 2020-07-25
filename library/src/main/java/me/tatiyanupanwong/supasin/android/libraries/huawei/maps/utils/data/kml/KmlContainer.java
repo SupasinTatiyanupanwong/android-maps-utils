@@ -15,7 +15,7 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.kml;
 
-import com.google.android.gms.maps.model.GroundOverlay;
+import com.huawei.hms.maps.model.GroundOverlay;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,7 +62,7 @@ public class KmlContainer {
 
     /**
      * @param placemarks Placemark for the container to contain
-     * @param object     Corresponding GoogleMap map object of the basic_placemark (if it has been
+     * @param object     Corresponding HuaweiMap map object of the basic_placemark (if it has been
      *                   added
      *                   to the map)
      */

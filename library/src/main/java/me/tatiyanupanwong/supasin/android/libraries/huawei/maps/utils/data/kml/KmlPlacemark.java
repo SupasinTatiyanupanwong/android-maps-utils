@@ -15,9 +15,9 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.kml;
 
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolygonOptions;
-import com.google.android.gms.maps.model.PolylineOptions;
+import com.huawei.hms.maps.model.MarkerOptions;
+import com.huawei.hms.maps.model.PolygonOptions;
+import com.huawei.hms.maps.model.PolylineOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Feature;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Geometry;
 

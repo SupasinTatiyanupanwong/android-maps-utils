@@ -21,28 +21,11 @@ android {
         javaMaxHeapSize "2g"
     }
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-        consumerProguardFiles 'consumer-rules.pro'
-        // This enables us to tell when we're running unit tests on Travis (#573)
-        buildConfigField("String", "TRAVIS", "\"" + System.getenv('TRAVIS') + "\"")
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
     }
     resourcePrefix 'amu_'
-    // This enables long timeouts required on slow environments, e.g. Travis
-    adbOptions {
-        timeOutInMs 10 * 60 * 1000  // 10 minutes
-        installOptions "-d", "-t"
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -57,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.huawei.hms:maps:5.0.0.300'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.13'
     testImplementation 'org.robolectric:robolectric:4.3.1'
@@ -65,7 +48,3 @@ dependencies {
 }
 
 task instrumentTest(dependsOn: connectedCheck)
-
-if (System.getenv("JITPACK")) {
-    apply plugin: 'maven'
-}

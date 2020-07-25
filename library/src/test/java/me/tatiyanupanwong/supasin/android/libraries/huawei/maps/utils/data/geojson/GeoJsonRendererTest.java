@@ -15,8 +15,8 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Feature;
 
 import org.junit.Before;
@@ -38,7 +38,7 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
 public class GeoJsonRendererTest {
-    private GoogleMap mMap1;
+    private HuaweiMap mMap1;
     private Set<GeoJsonFeature> geoJsonFeaturesSet;
     private GeoJsonRenderer mRenderer;
     private GeoJsonLayer mLayer;
@@ -114,7 +114,7 @@ public class GeoJsonRendererTest {
     @Test
     public void testDefaultStyleClickable() {
         // TODO - we should call mRenderer.addLayerToMap() here for a complete end-to-end test, but
-        // that requires an instantiated GoogleMap be passed into GeoJsonRenderer()
+        // that requires an instantiated HuaweiMap be passed into GeoJsonRenderer()
         for (Feature f : mRenderer.getFeatures()) {
             assertTrue(((GeoJsonFeature)f).getPolylineOptions().isClickable());
             assertTrue(((GeoJsonFeature)f).getPolygonOptions().isClickable());
@@ -140,7 +140,7 @@ public class GeoJsonRendererTest {
 
         GeoJsonRenderer renderer = new GeoJsonRenderer(mMap1, geoJsonFeatures, null, null, null, null);
         // TODO - we should call renderer.addLayerToMap() here for a complete end-to-end test, but
-        // that requires an instantiated GoogleMap be passed into GeoJsonRenderer()
+        // that requires an instantiated HuaweiMap be passed into GeoJsonRenderer()
         for (Feature f : renderer.getFeatures()) {
             assertFalse(((GeoJsonFeature)f).getPolylineOptions().isClickable());
             assertFalse(((GeoJsonFeature)f).getPolygonOptions().isClickable());

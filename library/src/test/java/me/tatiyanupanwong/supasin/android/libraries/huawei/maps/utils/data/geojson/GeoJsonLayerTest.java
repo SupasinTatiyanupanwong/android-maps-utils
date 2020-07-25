@@ -15,9 +15,9 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLngBounds;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Feature;
 
 import org.json.JSONObject;
@@ -34,9 +34,9 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
 public class GeoJsonLayerTest {
-    private GoogleMap map;
+    private HuaweiMap map;
     private GeoJsonLayer mLayer;
-    private GoogleMap map2;
+    private HuaweiMap map2;
 
     @Before
     public void setUp() throws Exception {

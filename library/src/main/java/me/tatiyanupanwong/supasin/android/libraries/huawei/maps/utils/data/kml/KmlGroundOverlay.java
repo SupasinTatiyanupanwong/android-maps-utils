@@ -15,8 +15,8 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.kml;
 
-import com.google.android.gms.maps.model.GroundOverlayOptions;
-import com.google.android.gms.maps.model.LatLngBounds;
+import com.huawei.hms.maps.model.GroundOverlayOptions;
+import com.huawei.hms.maps.model.LatLngBounds;
 
 import java.util.HashMap;
 import java.util.Map;

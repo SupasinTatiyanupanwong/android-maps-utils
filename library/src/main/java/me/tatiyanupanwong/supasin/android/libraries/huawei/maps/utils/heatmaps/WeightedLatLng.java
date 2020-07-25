@@ -16,7 +16,7 @@
 
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.heatmaps;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.geometry.Point;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.projection.SphericalMercatorProjection;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.quadtree.PointQuadTree;

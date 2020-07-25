@@ -15,7 +15,7 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.kml;
 
-import com.google.android.gms.maps.MapsInitializer;
+import com.huawei.hms.maps.MapsInitializer;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.TestUtil;
 
 import org.junit.Assume;

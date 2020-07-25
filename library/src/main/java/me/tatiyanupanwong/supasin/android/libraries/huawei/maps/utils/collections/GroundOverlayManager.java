@@ -18,9 +18,9 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collectio
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.GroundOverlay;
-import com.google.android.gms.maps.model.GroundOverlayOptions;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.GroundOverlay;
+import com.huawei.hms.maps.model.GroundOverlayOptions;
 
 /**
  * Keeps track of collections of ground overlays on the map. Delegates all GroundOverlay-related events to each
@@ -29,9 +29,9 @@ import com.google.android.gms.maps.model.GroundOverlayOptions;
  * All ground overlay operations (adds and removes) should occur via its collection class. That is, don't
  * add a ground overlay via a collection, then remove it via GroundOverlay.remove()
  */
-public class GroundOverlayManager extends MapObjectManager<GroundOverlay, GroundOverlayManager.Collection> implements GoogleMap.OnGroundOverlayClickListener {
+public class GroundOverlayManager extends MapObjectManager<GroundOverlay, GroundOverlayManager.Collection> implements HuaweiMap.OnGroundOverlayClickListener {
 
-    public GroundOverlayManager(@NonNull GoogleMap map) {
+    public GroundOverlayManager(@NonNull HuaweiMap map) {
         super(map);
     }
 
@@ -61,7 +61,7 @@ public class GroundOverlayManager extends MapObjectManager<GroundOverlay, Ground
     }
 
     public class Collection extends MapObjectManager.Collection {
-        private GoogleMap.OnGroundOverlayClickListener mGroundOverlayClickListener;
+        private HuaweiMap.OnGroundOverlayClickListener mGroundOverlayClickListener;
 
         public Collection() {
         }
@@ -104,7 +104,7 @@ public class GroundOverlayManager extends MapObjectManager<GroundOverlay, Ground
             return getObjects();
         }
 
-        public void setOnGroundOverlayClickListener(GoogleMap.OnGroundOverlayClickListener groundOverlayClickListener) {
+        public void setOnGroundOverlayClickListener(HuaweiMap.OnGroundOverlayClickListener groundOverlayClickListener) {
             mGroundOverlayClickListener = groundOverlayClickListener;
         }
     }

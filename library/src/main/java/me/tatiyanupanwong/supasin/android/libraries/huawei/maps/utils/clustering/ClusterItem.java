@@ -19,7 +19,7 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clusterin
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 
 /**
  * ClusterItem represents a marker on the map.

@@ -17,8 +17,8 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geoj
 
 import android.content.Context;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLngBounds;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLngBounds;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.GroundOverlayManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.MarkerManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.PolygonManager;
@@ -66,7 +66,7 @@ public class GeoJsonLayer extends Layer {
      * @param polylineManager polyline manager to create polyline collection from
      * @param groundOverlayManager ground overlay manager to create ground overlay collection from
      */
-    public GeoJsonLayer(GoogleMap map, JSONObject geoJsonFile, MarkerManager markerManager, PolygonManager polygonManager, PolylineManager polylineManager, GroundOverlayManager groundOverlayManager) {
+    public GeoJsonLayer(HuaweiMap map, JSONObject geoJsonFile, MarkerManager markerManager, PolygonManager polygonManager, PolylineManager polylineManager, GroundOverlayManager groundOverlayManager) {
         if (geoJsonFile == null) {
             throw new IllegalArgumentException("GeoJSON file cannot be null");
         }
@@ -99,7 +99,7 @@ public class GeoJsonLayer extends Layer {
      * @throws IOException   if the file cannot be open for read
      * @throws JSONException if the JSON file has invalid syntax and cannot be parsed successfully
      */
-    public GeoJsonLayer(GoogleMap map, int resourceId, Context context, MarkerManager markerManager, PolygonManager polygonManager, PolylineManager polylineManager, GroundOverlayManager groundOverlayManager)
+    public GeoJsonLayer(HuaweiMap map, int resourceId, Context context, MarkerManager markerManager, PolygonManager polygonManager, PolylineManager polylineManager, GroundOverlayManager groundOverlayManager)
             throws IOException, JSONException {
         this(map, createJsonFileObject(context.getResources().openRawResource(resourceId)), markerManager, polygonManager, polylineManager, groundOverlayManager);
     }
@@ -111,7 +111,7 @@ public class GeoJsonLayer extends Layer {
      * @param map         map where the layer is to be rendered
      * @param geoJsonFile GeoJSON data to add to the layer
      */
-    public GeoJsonLayer(GoogleMap map, JSONObject geoJsonFile) {
+    public GeoJsonLayer(HuaweiMap map, JSONObject geoJsonFile) {
         this(map, geoJsonFile, null, null, null, null);
     }
 
@@ -125,7 +125,7 @@ public class GeoJsonLayer extends Layer {
      * @throws IOException   if the file cannot be open for read
      * @throws JSONException if the JSON file has invalid syntax and cannot be parsed successfully
      */
-    public GeoJsonLayer(GoogleMap map, int resourceId, Context context)
+    public GeoJsonLayer(HuaweiMap map, int resourceId, Context context)
             throws IOException, JSONException {
         this(map, createJsonFileObject(context.getResources().openRawResource(resourceId)), null, null, null, null);
     }

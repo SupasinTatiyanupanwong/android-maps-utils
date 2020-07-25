@@ -21,10 +21,10 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.StyleSpan;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.huawei.hms.maps.CameraUpdateFactory;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.MarkerOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.ui.IconGenerator;
 
 import static android.graphics.Typeface.BOLD;

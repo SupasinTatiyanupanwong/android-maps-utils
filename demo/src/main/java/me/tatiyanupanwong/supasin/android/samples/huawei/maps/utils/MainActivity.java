@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        if (getString(R.string.maps_api_key).isEmpty()) {
-            Toast.makeText(this, "Add your own API key in demo/secure.properties as MAPS_API_KEY=YOUR_API_KEY", Toast.LENGTH_LONG).show();
-        }
-
         mListView = findViewById(R.id.list);
 
         addDemo("Clustering", ClusteringDemoActivity.class);

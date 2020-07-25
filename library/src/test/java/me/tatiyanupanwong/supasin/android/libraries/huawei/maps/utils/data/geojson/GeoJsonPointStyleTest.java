@@ -15,9 +15,9 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.huawei.hms.maps.MapsInitializer;
+import com.huawei.hms.maps.model.BitmapDescriptor;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.TestUtil;
 
 import org.junit.Assume;

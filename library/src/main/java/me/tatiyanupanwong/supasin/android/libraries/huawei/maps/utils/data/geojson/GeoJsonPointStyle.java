@@ -15,17 +15,15 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.huawei.hms.maps.model.BitmapDescriptor;
+import com.huawei.hms.maps.model.MarkerOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Style;
 
 import java.util.Arrays;
 
 /**
  * A class that allows for GeoJsonPoint objects to be styled and for these styles to be translated
- * into a MarkerOptions object. {@see
- * <a href="https://developer.android.com/reference/com/google/android/gms/maps/model/MarkerOptions.html">
- * MarkerOptions docs</a> for more details about the options.}
+ * into a MarkerOptions object.
  */
 public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
 
@@ -70,7 +68,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
     /**
      * Gets the Anchor U coordinate of the GeoJsonPoint. Normalized to [0, 1], of the anchor from
      * the left edge. This is equivalent to the same U value used in {@link
-     * com.google.android.gms.maps.model.MarkerOptions#getAnchorU()}.
+     * com.huawei.hms.maps.model.MarkerOptions#getAnchorU()}.
      *
      * @return Anchor U coordinate of the GeoJsonPoint
      */
@@ -81,7 +79,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
     /**
      * Gets the Anchor V coordinate of the GeoJsonPoint. Normalized to [0, 1], of the anchor from
      * the top edge. This is equivalent to the same V value used in {@link
-     * com.google.android.gms.maps.model.MarkerOptions#getAnchorV()}.
+     * com.huawei.hms.maps.model.MarkerOptions#getAnchorV()}.
      *
      * @return Anchor V coordinate of the GeoJsonPoint
      */
@@ -95,7 +93,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
      * continuous space [0.0, 1.0] x [0.0, 1.0], where (0, 0) is the top-left corner of the image,
      * and (1, 1) is the bottom-right corner. The U &amp; V values are the same U &amp; V values
      * used in
-     * {@link com.google.android.gms.maps.model.MarkerOptions#anchor(float, float)} ()}.
+     * {@link com.huawei.hms.maps.model.MarkerOptions#anchor(float, float)} ()}.
      *
      * @param anchorU Anchor U coordinate of the GeoJsonPoint
      * @param anchorV Anchor V coordinate of the GeoJsonPoint
@@ -165,7 +163,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
     /**
      * Gets the info window anchor U coordinate of the GeoJsonPoint. Normalized to [0, 1], of the
      * info window anchor from the left edge. This is equivalent to the same U value used in {@link
-     * com.google.android.gms.maps.model.MarkerOptions#getInfoWindowAnchorU()}.
+     * com.huawei.hms.maps.model.MarkerOptions#getInfoWindowAnchorU()}.
      *
      * @return info window anchor U coordinate of the GeoJsonPoint
      */
@@ -176,7 +174,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
     /**
      * Gets the info window anchor V coordinate of the GeoJsonPoint. Normalized to [0, 1], of the
      * info window anchor from the top edge. This is equivalent to the same V value used in {@link
-     * com.google.android.gms.maps.model.MarkerOptions#getInfoWindowAnchorV()}.
+     * com.huawei.hms.maps.model.MarkerOptions#getInfoWindowAnchorV()}.
      *
      * @return info window anchor V coordinate of the GeoJsonPoint
      */
@@ -188,7 +186,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
      * Sets the info window anchor U and V coordinates of the GeoJsonPoint. This is specified in
      * the same coordinate system as the anchor. The U &amp; V values are the same U &amp; V values
      * used in
-     * {@link com.google.android.gms.maps.model.MarkerOptions#infoWindowAnchor(float, float)}.
+     * {@link com.huawei.hms.maps.model.MarkerOptions#infoWindowAnchor(float, float)}.
      *
      * @param infoWindowAnchorU info window anchor U coordinate of the GeoJsonPoint
      * @param infoWindowAnchorV info window anchor V coordinate of the GeoJsonPoint

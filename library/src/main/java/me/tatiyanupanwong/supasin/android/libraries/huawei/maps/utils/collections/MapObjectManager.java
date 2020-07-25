@@ -20,7 +20,7 @@ import android.os.Handler;
 import android.os.Looper;
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.maps.GoogleMap;
+import com.huawei.hms.maps.HuaweiMap;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -38,12 +38,12 @@ import java.util.Set;
  * add an object via a collection, then remove it via Object.remove()
  */
 abstract class MapObjectManager<O, C extends MapObjectManager.Collection> {
-    protected final GoogleMap mMap;
+    protected final HuaweiMap mMap;
 
     private final Map<String, C> mNamedCollections = new HashMap<>();
     protected final Map<O, C> mAllObjects = new HashMap<>();
 
-    public MapObjectManager(@NonNull GoogleMap map) {
+    public MapObjectManager(@NonNull HuaweiMap map) {
         mMap = map;
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override

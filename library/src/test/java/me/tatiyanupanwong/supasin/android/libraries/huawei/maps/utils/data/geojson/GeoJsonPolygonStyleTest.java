@@ -15,9 +15,9 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.Dot;
-import com.google.android.gms.maps.model.JointType;
-import com.google.android.gms.maps.model.PatternItem;
+import com.huawei.hms.maps.model.Dot;
+import com.huawei.hms.maps.model.JointType;
+import com.huawei.hms.maps.model.PatternItem;
 
 import org.junit.Before;
 import org.junit.Test;

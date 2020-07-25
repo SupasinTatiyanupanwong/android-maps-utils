@@ -22,10 +22,10 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Tile;
-import com.google.android.gms.maps.model.TileOverlayOptions;
-import com.google.android.gms.maps.model.TileProvider;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.Tile;
+import com.huawei.hms.maps.model.TileOverlayOptions;
+import com.huawei.hms.maps.model.TileProvider;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.geometry.Point;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.projection.SphericalMercatorProjection;
 

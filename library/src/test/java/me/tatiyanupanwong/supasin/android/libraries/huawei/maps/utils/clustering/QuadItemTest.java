@@ -18,7 +18,7 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clusterin
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.algo.NonHierarchicalDistanceBasedAlgorithm;
 
 import org.junit.Test;

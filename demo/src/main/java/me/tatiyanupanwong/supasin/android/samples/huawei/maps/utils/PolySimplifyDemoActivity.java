@@ -18,11 +18,11 @@ package me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils;
 
 import android.graphics.Color;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.PolygonOptions;
-import com.google.android.gms.maps.model.PolylineOptions;
+import com.huawei.hms.maps.CameraUpdateFactory;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.PolygonOptions;
+import com.huawei.hms.maps.model.PolylineOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.PolyUtil;
 
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class PolySimplifyDemoActivity extends BaseDemoActivity {
 
     @Override
     protected void startDemo(boolean isRestore) {
-        GoogleMap map = getMap();
+        HuaweiMap map = getMap();
 
         // Original line
         List<LatLng> line = PolyUtil.decode(LINE);

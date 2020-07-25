@@ -16,7 +16,7 @@
 
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.algo;
 
-import com.google.android.gms.maps.model.CameraPosition;
+import com.huawei.hms.maps.model.CameraPosition;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.Cluster;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.ClusterItem;
 

@@ -21,9 +21,9 @@ import android.graphics.Color;
 
 import androidx.collection.LongSparseArray;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Tile;
-import com.google.android.gms.maps.model.TileProvider;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.Tile;
+import com.huawei.hms.maps.model.TileProvider;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.geometry.Bounds;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.geometry.Point;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.quadtree.PointQuadTree;

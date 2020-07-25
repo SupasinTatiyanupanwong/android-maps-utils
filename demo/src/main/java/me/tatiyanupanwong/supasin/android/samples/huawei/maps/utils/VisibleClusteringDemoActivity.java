@@ -19,8 +19,8 @@ package me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.CameraUpdateFactory;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.ClusterManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.algo.NonHierarchicalViewBasedAlgorithm;
 import me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils.model.MyItem;

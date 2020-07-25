@@ -19,18 +19,18 @@ package me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
+import com.huawei.hms.maps.CameraUpdateFactory;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.Marker;
+import com.huawei.hms.maps.model.MarkerOptions;
+import com.huawei.hms.maps.model.Polyline;
+import com.huawei.hms.maps.model.PolylineOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.SphericalUtil;
 
 import java.util.Arrays;
 
-public class DistanceDemoActivity extends BaseDemoActivity implements GoogleMap.OnMarkerDragListener {
+public class DistanceDemoActivity extends BaseDemoActivity implements HuaweiMap.OnMarkerDragListener {
     private TextView mTextView;
     private Marker mMarkerA;
     private Marker mMarkerB;

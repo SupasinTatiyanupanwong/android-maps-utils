@@ -18,32 +18,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId 'me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils'
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
-        // Read the API key from demo/secure.properties into R.string.maps_api_key
-        def secureProps = new Properties()
-        if (file("secure.properties").exists()) {
-            file("secure.properties")?.withInputStream { secureProps.load(it) }
-        }
-        resValue "string", "maps_api_key", (secureProps.getProperty("MAPS_API_KEY") ?: "")
-
-        // To add your Maps API key to this project:
-        // 1. Create a file demo/secure.properties
-        // 2. Add this line, where YOUR_API_KEY is your API key:
-        //        MAPS_API_KEY=YOUR_API_KEY
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
     }
 
     compileOptions {
@@ -57,7 +35,7 @@ dependencies {
 //    implementation 'com.google.maps.android:android-maps-utils:2.0.3'
     // [START_EXCLUDE silent]
     implementation project(':library')
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.huawei.hms:maps:5.0.0.300'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     // [END_EXCLUDE]

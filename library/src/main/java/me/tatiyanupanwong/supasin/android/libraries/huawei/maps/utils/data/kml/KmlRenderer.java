@@ -23,11 +23,11 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.GroundOverlay;
-import com.google.android.gms.maps.model.GroundOverlayOptions;
-import com.google.android.gms.maps.model.Marker;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.BitmapDescriptor;
+import com.huawei.hms.maps.model.GroundOverlay;
+import com.huawei.hms.maps.model.GroundOverlayOptions;
+import com.huawei.hms.maps.model.Marker;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.GroundOverlayManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.MarkerManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.PolygonManager;
@@ -52,7 +52,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Renders all visible KmlPlacemark and KmlGroundOverlay objects onto the GoogleMap as Marker,
+ * Renders all visible KmlPlacemark and KmlGroundOverlay objects onto the HuaweiMap as Marker,
  * Polyline, Polygon, GroundOverlay objects. Also removes objects from the map.
  */
 public class KmlRenderer extends Renderer {
@@ -67,7 +67,7 @@ public class KmlRenderer extends Renderer {
 
     private ArrayList<KmlContainer> mContainers;
 
-    /* package */ KmlRenderer(GoogleMap map,
+    /* package */ KmlRenderer(HuaweiMap map,
                               Context context,
                               MarkerManager markerManager,
                               PolygonManager polygonManager,
@@ -185,7 +185,7 @@ public class KmlRenderer extends Renderer {
      *
      * @param map map to place placemark, container, style and ground overlays on
      */
-    public void setMap(GoogleMap map) {
+    public void setMap(HuaweiMap map) {
         removeLayerFromMap();
         super.setMap(map);
         addLayerToMap();
@@ -320,7 +320,7 @@ public class KmlRenderer extends Renderer {
     }
 
     /**
-     * Adds the marker icon stored in mMarkerIconCache, to the {@link com.google.android.gms.maps.model.Marker}
+     * Adds the marker icon stored in mMarkerIconCache, to the {@link com.huawei.hms.maps.model.Marker}
      * recursing over multi-geometry placemarks to add icons to all point geometries
      *
      * @param iconUrl    icon url of icon to add to markers

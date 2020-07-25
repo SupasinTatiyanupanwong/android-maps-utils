@@ -19,7 +19,7 @@ package me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils;
 import androidx.lifecycle.ViewModel;
 import android.content.res.Resources;
 
-import com.google.android.gms.maps.model.LatLng;
+import com.huawei.hms.maps.model.LatLng;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.algo.NonHierarchicalViewBasedAlgorithm;
 import me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils.model.MyItem;
 

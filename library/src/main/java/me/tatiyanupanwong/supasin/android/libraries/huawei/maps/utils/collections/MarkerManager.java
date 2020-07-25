@@ -18,9 +18,9 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collectio
 
 import android.view.View;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.Marker;
+import com.huawei.hms.maps.model.MarkerOptions;
 
 /**
  * Keeps track of collections of markers on the map. Delegates all Marker-related events to each
@@ -30,13 +30,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * add a marker via a collection, then remove it via Marker.remove()
  */
 public class MarkerManager extends MapObjectManager<Marker, MarkerManager.Collection> implements
-        GoogleMap.OnInfoWindowClickListener,
-        GoogleMap.OnMarkerClickListener,
-        GoogleMap.OnMarkerDragListener,
-        GoogleMap.InfoWindowAdapter,
-        GoogleMap.OnInfoWindowLongClickListener {
+        HuaweiMap.OnInfoWindowClickListener,
+        HuaweiMap.OnMarkerClickListener,
+        HuaweiMap.OnMarkerDragListener,
+        HuaweiMap.InfoWindowAdapter,
+        HuaweiMap.OnInfoWindowLongClickListener {
 
-    public MarkerManager(GoogleMap map) {
+    public MarkerManager(HuaweiMap map) {
         super(map);
     }
 
@@ -128,11 +128,11 @@ public class MarkerManager extends MapObjectManager<Marker, MarkerManager.Collec
     }
 
     public class Collection extends MapObjectManager.Collection {
-        private GoogleMap.OnInfoWindowClickListener mInfoWindowClickListener;
-        private GoogleMap.OnInfoWindowLongClickListener mInfoWindowLongClickListener;
-        private GoogleMap.OnMarkerClickListener mMarkerClickListener;
-        private GoogleMap.OnMarkerDragListener mMarkerDragListener;
-        private GoogleMap.InfoWindowAdapter mInfoWindowAdapter;
+        private HuaweiMap.OnInfoWindowClickListener mInfoWindowClickListener;
+        private HuaweiMap.OnInfoWindowLongClickListener mInfoWindowLongClickListener;
+        private HuaweiMap.OnMarkerClickListener mMarkerClickListener;
+        private HuaweiMap.OnMarkerDragListener mMarkerDragListener;
+        private HuaweiMap.InfoWindowAdapter mInfoWindowAdapter;
 
         public Collection() {
         }
@@ -175,23 +175,23 @@ public class MarkerManager extends MapObjectManager<Marker, MarkerManager.Collec
             return getObjects();
         }
 
-        public void setOnInfoWindowClickListener(GoogleMap.OnInfoWindowClickListener infoWindowClickListener) {
+        public void setOnInfoWindowClickListener(HuaweiMap.OnInfoWindowClickListener infoWindowClickListener) {
             mInfoWindowClickListener = infoWindowClickListener;
         }
 
-        public void setOnInfoWindowLongClickListener(GoogleMap.OnInfoWindowLongClickListener infoWindowLongClickListener) {
+        public void setOnInfoWindowLongClickListener(HuaweiMap.OnInfoWindowLongClickListener infoWindowLongClickListener) {
             mInfoWindowLongClickListener = infoWindowLongClickListener;
         }
 
-        public void setOnMarkerClickListener(GoogleMap.OnMarkerClickListener markerClickListener) {
+        public void setOnMarkerClickListener(HuaweiMap.OnMarkerClickListener markerClickListener) {
             mMarkerClickListener = markerClickListener;
         }
 
-        public void setOnMarkerDragListener(GoogleMap.OnMarkerDragListener markerDragListener) {
+        public void setOnMarkerDragListener(HuaweiMap.OnMarkerDragListener markerDragListener) {
             mMarkerDragListener = markerDragListener;
         }
 
-        public void setInfoWindowAdapter(GoogleMap.InfoWindowAdapter infoWindowAdapter) {
+        public void setInfoWindowAdapter(HuaweiMap.InfoWindowAdapter infoWindowAdapter) {
             mInfoWindowAdapter = infoWindowAdapter;
         }
     }

@@ -22,7 +22,7 @@ import android.util.Log;
 
 import androidx.annotation.RawRes;
 
-import com.google.android.gms.maps.GoogleMap;
+import com.huawei.hms.maps.HuaweiMap;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.GroundOverlayManager;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Layer;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections.MarkerManager;
@@ -51,13 +51,13 @@ public class KmlLayer extends Layer {
      *
      * Constructor may be called on a background thread, as I/O and parsing may be long-running.
      *
-     * @param map        GoogleMap object
+     * @param map        HuaweiMap object
      * @param resourceId Raw resource KML or KMZ file
      * @param context The Context
      * @throws XmlPullParserException if file cannot be parsed
      * @throws IOException if I/O error
      */
-    public KmlLayer(GoogleMap map, int resourceId, Context context)
+    public KmlLayer(HuaweiMap map, int resourceId, Context context)
             throws XmlPullParserException, IOException {
         this(map, context.getResources().openRawResource(resourceId), context, new MarkerManager(map), new PolygonManager(map), new PolylineManager(map), new GroundOverlayManager(map), null);
     }
@@ -67,13 +67,13 @@ public class KmlLayer extends Layer {
      *
      * Constructor may be called on a background thread, as I/O and parsing may be long-running.
      *
-     * @param map    GoogleMap object
+     * @param map    HuaweiMap object
      * @param stream InputStream containing KML or KMZ file
      * @param context The Context
      * @throws XmlPullParserException if file cannot be parsed
      * @throws IOException if I/O error
      */
-    public KmlLayer(GoogleMap map, InputStream stream, Context context)
+    public KmlLayer(HuaweiMap map, InputStream stream, Context context)
             throws XmlPullParserException, IOException {
         this(map, stream, context, new MarkerManager(map), new PolygonManager(map), new PolylineManager(map), new GroundOverlayManager(map), null);
     }
@@ -86,7 +86,7 @@ public class KmlLayer extends Layer {
      * Use this constructor with shared object managers in order to handle multiple layers with
      * their own event handlers on the map.
      *
-     * @param map        GoogleMap object
+     * @param map        HuaweiMap object
      * @param resourceId Raw resource KML or KMZ file
      * @param context The Context
      * @param markerManager marker manager to create marker collection from
@@ -97,7 +97,7 @@ public class KmlLayer extends Layer {
      * @throws XmlPullParserException if file cannot be parsed
      * @throws IOException if I/O error
      */
-    public KmlLayer(GoogleMap map,
+    public KmlLayer(HuaweiMap map,
                     @RawRes int resourceId,
                     Context context,
                     MarkerManager markerManager,
@@ -117,7 +117,7 @@ public class KmlLayer extends Layer {
      * Use this constructor with shared object managers in order to handle multiple layers with
      * their own event handlers on the map.
      *
-     * @param map    GoogleMap object
+     * @param map    HuaweiMap object
      * @param stream InputStream containing KML or KMZ file
      * @param context The Context
      * @param markerManager marker manager to create marker collection from
@@ -128,7 +128,7 @@ public class KmlLayer extends Layer {
      * @throws XmlPullParserException if file cannot be parsed
      * @throws IOException if I/O error
      */
-    public KmlLayer(GoogleMap map,
+    public KmlLayer(HuaweiMap map,
                     InputStream stream,
                     Context context,
                     MarkerManager markerManager,

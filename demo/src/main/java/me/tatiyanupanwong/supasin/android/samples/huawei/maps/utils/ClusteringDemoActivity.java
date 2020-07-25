@@ -21,10 +21,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
+import com.huawei.hms.maps.CameraUpdateFactory;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.Marker;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.clustering.ClusterManager;
 import me.tatiyanupanwong.supasin.android.samples.huawei.maps.utils.model.MyItem;
 
@@ -49,8 +49,8 @@ public class ClusteringDemoActivity extends BaseDemoActivity {
         getMap().setOnCameraIdleListener(mClusterManager);
 
         // Add a custom InfoWindowAdapter by setting it to the MarkerManager.Collection object from
-        // ClusterManager rather than from GoogleMap.setInfoWindowAdapter
-        mClusterManager.getMarkerCollection().setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+        // ClusterManager rather than from HuaweiMap.setInfoWindowAdapter
+        mClusterManager.getMarkerCollection().setInfoWindowAdapter(new HuaweiMap.InfoWindowAdapter() {
             @Override
             public View getInfoWindow(Marker marker) {
                 final LayoutInflater inflater = LayoutInflater.from(ClusteringDemoActivity.this);

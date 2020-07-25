@@ -15,8 +15,8 @@
  */
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.geojson;
 
-import com.google.android.gms.maps.model.PatternItem;
-import com.google.android.gms.maps.model.PolygonOptions;
+import com.huawei.hms.maps.model.PatternItem;
+import com.huawei.hms.maps.model.PolygonOptions;
 import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.data.Style;
 
 import java.util.Arrays;
@@ -24,9 +24,7 @@ import java.util.List;
 
 /**
  * A class that allows for GeoJsonPolygon objects to be styled and for these styles to be
- * translated into a PolygonOptions object. {@see
- * <a href="https://developer.android.com/reference/com/google/android/gms/maps/model/PolygonOptions.html">
- * PolygonOptions docs</a> for more details about the options.}
+ * translated into a PolygonOptions object.
  */
 public class GeoJsonPolygonStyle extends Style implements GeoJsonStyle {
 

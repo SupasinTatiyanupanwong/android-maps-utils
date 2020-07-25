@@ -16,9 +16,9 @@
 
 package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.collections;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.Polygon;
-import com.google.android.gms.maps.model.PolygonOptions;
+import com.huawei.hms.maps.HuaweiMap;
+import com.huawei.hms.maps.model.Polygon;
+import com.huawei.hms.maps.model.PolygonOptions;
 
 /**
  * Keeps track of collections of polygons on the map. Delegates all Polygon-related events to each
@@ -27,9 +27,9 @@ import com.google.android.gms.maps.model.PolygonOptions;
  * All polygon operations (adds and removes) should occur via its collection class. That is, don't
  * add a polygon via a collection, then remove it via Polygon.remove()
  */
-public class PolygonManager extends MapObjectManager<Polygon, PolygonManager.Collection> implements GoogleMap.OnPolygonClickListener {
+public class PolygonManager extends MapObjectManager<Polygon, PolygonManager.Collection> implements HuaweiMap.OnPolygonClickListener {
 
-    public PolygonManager(GoogleMap map) {
+    public PolygonManager(HuaweiMap map) {
         super(map);
     }
 
@@ -59,7 +59,7 @@ public class PolygonManager extends MapObjectManager<Polygon, PolygonManager.Col
     }
 
     public class Collection extends MapObjectManager.Collection {
-        private GoogleMap.OnPolygonClickListener mPolygonClickListener;
+        private HuaweiMap.OnPolygonClickListener mPolygonClickListener;
 
         public Collection() {
         }
@@ -102,7 +102,7 @@ public class PolygonManager extends MapObjectManager<Polygon, PolygonManager.Col
             return getObjects();
         }
 
-        public void setOnPolygonClickListener(GoogleMap.OnPolygonClickListener polygonClickListener) {
+        public void setOnPolygonClickListener(HuaweiMap.OnPolygonClickListener polygonClickListener) {
             mPolygonClickListener = polygonClickListener;
         }
     }
