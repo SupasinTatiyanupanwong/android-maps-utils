@@ -1,4 +1,5 @@
 /*
+ * Copyright 2020 Supasin Tatiyanupanwong
  * Copyright 2020 Google Inc.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +15,7 @@
  * limitations under the License.
  */
 /*
+ * Copyright 2020 Supasin Tatiyanupanwong
  * Copyright 2016 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
