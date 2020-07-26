@@ -19,6 +19,8 @@ package me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.projectio
 
 import com.huawei.hms.maps.model.LatLng;
 
+import me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.geometry.Point;
+
 public class SphericalMercatorProjection {
     final double mWorldWidth;
 
@@ -26,7 +28,6 @@ public class SphericalMercatorProjection {
         mWorldWidth = worldWidth;
     }
 
-    @SuppressWarnings("deprecation")
     public Point toPoint(final LatLng latLng) {
         final double x = latLng.longitude / 360 + .5;
         final double siny = Math.sin(Math.toRadians(latLng.latitude));
@@ -35,7 +36,7 @@ public class SphericalMercatorProjection {
         return new Point(x * mWorldWidth, y * mWorldWidth);
     }
 
-    public LatLng toLatLng(me.tatiyanupanwong.supasin.android.libraries.huawei.maps.utils.geometry.Point point) {
+    public LatLng toLatLng(Point point) {
         final double x = point.x / mWorldWidth - 0.5;
         final double lng = x * 360;
 
