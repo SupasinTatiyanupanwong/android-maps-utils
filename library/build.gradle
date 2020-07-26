@@ -49,3 +49,5 @@ dependencies {
 }
 
 task instrumentTest(dependsOn: connectedCheck)
+
+apply from: 'publish.gradle'
