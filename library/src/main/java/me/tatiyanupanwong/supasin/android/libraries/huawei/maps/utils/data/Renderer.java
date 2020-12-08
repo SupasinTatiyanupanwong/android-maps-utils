@@ -1155,7 +1155,7 @@ public class Renderer {
             }
 
             public View getInfoContents(Marker arg0) {
-                View view = LayoutInflater.from(mContext).inflate(R.layout.amu_info_window, null);
+                View view = LayoutInflater.from(mContext).inflate(R.layout.hmu_info_window, null);
                 TextView infoWindowText = view.findViewById(R.id.window);
                 if (arg0.getSnippet() != null) {
                     infoWindowText.setText(Html.fromHtml(arg0.getTitle() + "<br>" + arg0.getSnippet()));

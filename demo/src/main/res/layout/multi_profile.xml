@@ -27,10 +27,10 @@
             android:layout_height="@dimen/custom_profile_image"/>
 
     <TextView
-            android:id="@id/amu_text"
+            android:id="@id/hmu_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/amu_Bubble.TextAppearance.Light"
+            android:textAppearance="@style/hmu_Bubble.TextAppearance.Light"
             android:background="@android:color/black"
             android:paddingLeft="@dimen/custom_profile_padding"
             android:paddingRight="@dimen/custom_profile_padding"

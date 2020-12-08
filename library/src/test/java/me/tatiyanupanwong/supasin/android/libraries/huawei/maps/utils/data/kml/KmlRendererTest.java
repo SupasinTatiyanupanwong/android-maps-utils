@@ -38,7 +38,7 @@ public class KmlRendererTest {
 
     @Before
     public void setUp() throws Exception {
-        XmlPullParser parser = createParser("amu_inline_style.kml");
+        XmlPullParser parser = createParser("hmu_inline_style.kml");
         mParser = new KmlParser(parser);
         mParser.parseKml();
 

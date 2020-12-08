@@ -138,7 +138,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
         mDensity = context.getResources().getDisplayMetrics().density;
         mIconGenerator = new IconGenerator(context);
         mIconGenerator.setContentView(makeSquareTextView(context));
-        mIconGenerator.setTextAppearance(R.style.amu_ClusterIcon_TextAppearance);
+        mIconGenerator.setTextAppearance(R.style.hmu_ClusterIcon_TextAppearance);
         mIconGenerator.setBackground(makeClusterBackground());
         mClusterManager = clusterManager;
     }
@@ -220,7 +220,7 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
         SquareTextView squareTextView = new SquareTextView(context);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         squareTextView.setLayoutParams(layoutParams);
-        squareTextView.setId(R.id.amu_text);
+        squareTextView.setId(R.id.hmu_text);
         int twelveDpi = (int) (12 * mDensity);
         squareTextView.setPadding(twelveDpi, twelveDpi, twelveDpi, twelveDpi);
         return squareTextView;

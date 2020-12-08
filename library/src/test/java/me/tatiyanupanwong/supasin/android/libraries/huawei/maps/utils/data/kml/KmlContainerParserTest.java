@@ -33,29 +33,29 @@ public class KmlContainerParserTest {
 
     @Test
     public void testCDataEntity() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_cdata.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_cdata.kml");
         KmlContainer kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertEquals("TELEPORT", kmlContainer.getProperty("description"));
     }
 
     @Test
     public void testCreateContainerProperty() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_basic_folder.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_basic_folder.kml");
         KmlContainer kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertTrue(kmlContainer.hasProperties());
         assertEquals("Basic Folder", kmlContainer.getProperty("name"));
-        xmlPullParser = createParser("amu_unknown_folder.kml");
+        xmlPullParser = createParser("hmu_unknown_folder.kml");
         kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertTrue(kmlContainer.hasProperty("name"));
     }
 
     @Test
     public void testCreateContainerPlacemark() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_basic_folder.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_basic_folder.kml");
         KmlContainer kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertTrue(kmlContainer.hasPlacemarks());
         assertEquals(1, kmlContainer.getPlacemarksHashMap().size());
-        xmlPullParser = createParser("amu_multiple_placemarks.kml");
+        xmlPullParser = createParser("hmu_multiple_placemarks.kml");
         kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertTrue(kmlContainer.hasPlacemarks());
         assertEquals(2, kmlContainer.getPlacemarksHashMap().size());
@@ -63,14 +63,14 @@ public class KmlContainerParserTest {
 
     @Test
     public void testCreateContainerGroundOverlay() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_ground_overlay.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_ground_overlay.kml");
         KmlContainer kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertEquals(2, kmlContainer.getGroundOverlayHashMap().size());
     }
 
     @Test
     public void testCreateContainerObjects() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_nested_folders.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_nested_folders.kml");
         KmlContainer kmlContainer = KmlContainerParser.createContainer(xmlPullParser);
         assertNotNull(kmlContainer.getContainers());
         int numberOfNestedContainers = 0;

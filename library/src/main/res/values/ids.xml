@@ -17,5 +17,5 @@
 -->
 
 <resources>
-    <item name="amu_text" type="id" />
+    <item name="hmu_text" type="id" />
 </resources>

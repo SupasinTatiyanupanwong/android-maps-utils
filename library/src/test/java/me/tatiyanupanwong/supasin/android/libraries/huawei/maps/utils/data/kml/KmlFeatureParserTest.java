@@ -37,7 +37,7 @@ public class KmlFeatureParserTest {
 
     @Test
     public void testPolygon() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_basic_placemark.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_basic_placemark.kml");
         KmlPlacemark placemark = KmlFeatureParser.createPlacemark(xmlPullParser);
         assertNotNull(placemark);
         assertEquals(placemark.getGeometry().getGeometryType(), "Polygon");
@@ -48,7 +48,7 @@ public class KmlFeatureParserTest {
 
     @Test
     public void testMultiGeometry() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_multigeometry_placemarks.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_multigeometry_placemarks.kml");
         KmlPlacemark placemark = KmlFeatureParser.createPlacemark(xmlPullParser);
         assertNotNull(placemark);
         assertEquals(placemark.getGeometry().getGeometryType(), "MultiGeometry");
@@ -58,7 +58,7 @@ public class KmlFeatureParserTest {
 
     @Test
     public void testProperties() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_multigeometry_placemarks.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_multigeometry_placemarks.kml");
         KmlPlacemark placemark = KmlFeatureParser.createPlacemark(xmlPullParser);
         assertTrue(placemark.hasProperties());
         assertEquals(placemark.getProperty("name"), "Placemark Test");
@@ -67,14 +67,14 @@ public class KmlFeatureParserTest {
 
     @Test
     public void testExtendedData() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_multiple_placemarks.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_multiple_placemarks.kml");
         KmlPlacemark placemark = KmlFeatureParser.createPlacemark(xmlPullParser);
         assertNotNull(placemark.getProperty("holeNumber"));
     }
 
     @Test
     public void testGroundOverlay() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_ground_overlay.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_ground_overlay.kml");
         KmlGroundOverlay groundOverlay = KmlFeatureParser.createGroundOverlay(xmlPullParser);
         assertNotNull(groundOverlay);
         assertEquals(groundOverlay.getProperty("name"), "Sample Ground Overlay");
@@ -82,14 +82,14 @@ public class KmlFeatureParserTest {
         assertEquals(groundOverlay.getGroundOverlayOptions().getZIndex(), 99.0f, 0);
         assertTrue(groundOverlay.getGroundOverlayOptions().isVisible());
         assertNotNull(groundOverlay.getLatLngBox());
-        xmlPullParser = createParser("amu_ground_overlay_color.kml");
+        xmlPullParser = createParser("hmu_ground_overlay_color.kml");
         groundOverlay = KmlFeatureParser.createGroundOverlay(xmlPullParser);
         assertNotNull(groundOverlay);
     }
 
     @Test
     public void testMultiGeometries() throws Exception {
-        XmlPullParser xmlPullParser = createParser("amu_nested_multigeometry.kml");
+        XmlPullParser xmlPullParser = createParser("hmu_nested_multigeometry.kml");
         KmlPlacemark feature = KmlFeatureParser.createPlacemark(xmlPullParser);
         assertEquals(feature.getProperty("name"), "multiPointLine");
         assertEquals(feature.getProperty("description"), "Nested MultiGeometry structure");

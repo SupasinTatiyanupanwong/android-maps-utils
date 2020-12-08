@@ -40,8 +40,8 @@ class BubbleDrawable extends Drawable {
     private int mColor = Color.WHITE;
 
     public BubbleDrawable(Context context) {
-        mMask = ContextCompat.getDrawable(context, R.drawable.amu_bubble_mask);
-        mShadow = ContextCompat.getDrawable(context, R.drawable.amu_bubble_shadow);
+        mMask = ContextCompat.getDrawable(context, R.drawable.hmu_bubble_mask);
+        mShadow = ContextCompat.getDrawable(context, R.drawable.hmu_bubble_shadow);
     }
 
     public void setColor(int color) {

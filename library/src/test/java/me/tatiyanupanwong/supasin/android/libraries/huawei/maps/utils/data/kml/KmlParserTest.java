@@ -37,7 +37,7 @@ public class KmlParserTest {
 
     @Test
     public void testInlineStyle() throws Exception {
-        XmlPullParser parser = createParser("amu_inline_style.kml");
+        XmlPullParser parser = createParser("hmu_inline_style.kml");
         KmlParser mParser = new KmlParser(parser);
         mParser.parseKml();
         assertNotNull(mParser.getPlacemarks());
@@ -57,7 +57,7 @@ public class KmlParserTest {
 
     @Test
     public void testEmptyHotSpotStyle() throws Exception {
-        XmlPullParser parser = createParser("amu_empty_hotspot.kml");
+        XmlPullParser parser = createParser("hmu_empty_hotspot.kml");
         KmlParser mParser = new KmlParser(parser);
         mParser.parseKml();
         assertNotNull(mParser.getPlacemarks());
@@ -67,7 +67,7 @@ public class KmlParserTest {
     @Test
     public void testPolyStyleBooleanNumeric() throws Exception {
         XmlPullParser parser =
-                createParser("amu_poly_style_boolean_numeric.kml");
+                createParser("hmu_poly_style_boolean_numeric.kml");
         KmlParser mParser = new KmlParser(parser);
         mParser.parseKml();
         assertNotNull(mParser.getPlacemarks());
@@ -85,7 +85,7 @@ public class KmlParserTest {
     @Test
     public void testPolyStyleBooleanAlpha() throws Exception {
         XmlPullParser parser =
-                createParser("amu_poly_style_boolean_alpha.kml");
+                createParser("hmu_poly_style_boolean_alpha.kml");
         KmlParser mParser = new KmlParser(parser);
         mParser.parseKml();
         assertNotNull(mParser.getPlacemarks());
@@ -102,7 +102,7 @@ public class KmlParserTest {
 
     @Test
     public void testContainerHeirarchy() throws Exception {
-        XmlPullParser parser = createParser("amu_document_nest.kml");
+        XmlPullParser parser = createParser("hmu_document_nest.kml");
         KmlParser mParser = new KmlParser(parser);
         mParser.parseKml();
         assertEquals(mParser.getContainers().get(0).getContainerId(), "hasId");
@@ -112,7 +112,7 @@ public class KmlParserTest {
 
     @Test
     public void testPlacemarkParsing() throws Exception {
-        XmlPullParser parser = createParser("amu_unsupported.kml");
+        XmlPullParser parser = createParser("hmu_unsupported.kml");
         KmlParser mParser = new KmlParser(parser);
         mParser.parseKml();
         assertEquals(1, mParser.getPlacemarks().size());
